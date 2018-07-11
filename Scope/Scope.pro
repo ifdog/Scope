@@ -32,3 +32,6 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+
+win32: LIBS += -lUser32
