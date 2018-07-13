@@ -13,7 +13,9 @@ void ATcpServer::Start(){
 }
 
 void ATcpServer::Stop(){
-    Server->close();
+    if(Server->isListening()){
+         Server->close();
+    }
 }
 
 void ATcpServer::Accept(){

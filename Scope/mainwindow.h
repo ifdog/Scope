@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ascreen.h"
+#include "atcpserver.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,5 +29,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    int runmode; //0:Server,1:Client;
+    AScreen *ascreen;
+    ATcpServer *atcpserver;
+
 };
 #endif // MAINWINDOW_H

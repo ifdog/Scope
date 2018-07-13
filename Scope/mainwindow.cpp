@@ -39,12 +39,18 @@ void MainWindow::hotkey_settings(){
 }
 
 void MainWindow::hotkey_start(){
-  ATcpServer *server = new ATcpServer("127.0.0.1",2333,this);
-  server->Start();
+    if(!atcpserver){
+        atcpserver = new ATcpServer("127.0.0.1",2333,this);
+        atcpserver->Start();
+    }
 }
 
 void MainWindow::hotkey_stop(){
 
+    if(atcpserver){
+        atcpserver->Stop();
+        delete atcpserver;
+    }
 }
 
 

@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     ascreen.cpp \
-    atcpserver.cpp
+    atcpserver.cpp \
+    amessage.cpp
 
 HEADERS += \
         mainwindow.h \
     ascreen.h \
-    atcpserver.h
+    atcpserver.h \
+    amessage.h
 
 FORMS += \
         mainwindow.ui
