@@ -15,8 +15,17 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+
+    void hotkey_server();
+    void hotkey_client();
+    void hotkey_settings();
+    void hotkey_start();
+    void hotkey_stop();
+
+
+
 private:
     Ui::MainWindow *ui;
 };
-
 #endif // MAINWINDOW_H
